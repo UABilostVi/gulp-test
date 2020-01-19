@@ -1,29 +1,25 @@
 {
-  "name": "gulp-test",
+  "name": "gulp-start",
   "version": "1.0.0",
-  "description": "",
+  "description": "start gulp",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-cssbeautify": "^2.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/UABilostVi/gulp-test.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Vadim Prokopchuk",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/UABilostVi/gulp-test/issues"
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1"
   },
-  "homepage": "https://github.com/UABilostVi/gulp-test#readme"
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
+  }
 }
