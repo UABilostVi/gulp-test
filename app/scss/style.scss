@@ -1,11 +1,25 @@
 @import "vars";
-@import "libs";
 @import "fonts";
+@import "media";
+@import "libs";
 
-
-body {
-	background-color: blue;
+main {
+	background-color: #565647;
 }
 
+header {
+	background-color: rgb(145, 77, 77);
+}
 
-@import "media";
+footer {
+	background-color: rgb(60, 58, 102);
+}
+
+.header-wrapper {
+	display: grid;
+}
+
+.logo a {
+	display: block;
+	background-color: rgb(65, 26, 26);
+}

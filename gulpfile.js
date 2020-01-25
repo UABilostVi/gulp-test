@@ -5,7 +5,8 @@ let gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     del = require('del'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    pug = require('gulp-pug');
 
 
 gulp.task('clean', async function(){
@@ -61,6 +62,15 @@ gulp.task('browser-sync', function() {
   });
 });
 
+gulp.task('pug', function(){
+  return gulp.src('app/pug/index.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('app/'))
+    .pipe(browserSync.reload({stream: true}))
+});
+
 gulp.task('export', function(){
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
@@ -82,8 +92,9 @@ gulp.task('watch', function(){
   gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
   gulp.watch('app/*.html', gulp.parallel('html'))
   gulp.watch('app/js/*.js', gulp.parallel('script'))
+  gulp.watch('app/pug/*.pug', gulp.parallel('pug'))
 });
 
 gulp.task('build', gulp.series('clean', 'export'))
 
-gulp.task('default', gulp.parallel('css' ,'scss', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('pug','css','scss', 'js', 'browser-sync', 'watch'));
