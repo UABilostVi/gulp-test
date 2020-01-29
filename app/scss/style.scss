@@ -1,7 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "media";
-@import "libs";
+@import "libs.scss";
 
 main {
 	background-color: #565647;
@@ -15,8 +15,18 @@ footer {
 	background-color: rgb(60, 58, 102);
 }
 
-.header-wrapper {
+.header__wrapper {
 	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.logo {
+
+
+}
+
+.header__menu {
+
 }
 
 .logo a {
